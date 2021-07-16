@@ -1,0 +1,263 @@
+.draw-border {
+  box-shadow: inset 0 0 0 4px #013220;
+  color: #013220;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-border::before, .draw-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-border:hover {
+  color: #98c379;
+}
+.draw-border:hover::before, .draw-border:hover::after {
+  border-color: #98c379;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+
+.draw-flag-border {
+  box-shadow: inset 0 0 0 4px #98c379;
+  color: #98c379;
+  transition: color 0.25s 0.0833333333s;
+  position: relative;
+}
+.draw-flag-border::before, .draw-flag-border::after {
+  border: 0 solid transparent;
+  box-sizing: border-box;
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+.draw-flag-border::before {
+  border-bottom-width: 4px;
+  border-left-width: 4px;
+}
+.draw-flag-border::after {
+  border-top-width: 4px;
+  border-right-width: 4px;
+}
+.draw-flag-border:hover {
+  color: #013220;
+}
+.draw-flag-border:hover::before, .draw-flag-border:hover::after {
+  border-color: #013220;
+  transition: border-color 0s, width 0.25s, height 0.25s;
+  width: 100%;
+  height: 100%;
+}
+.draw-flag-border:hover::before {
+  transition-delay: 0s, 0s, 0.25s;
+}
+.draw-flag-border:hover::after {
+  transition-delay: 0s, 0.25s, 0s;
+}
+
+.flag-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+}
+
+table {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr {
+  position: relative;
+  height: 10%;
+}
+
+td {
+  position: relative;
+  line-height: 1.75em;
+  width: 10%;
+  height: 10%;
+  border: solid 2px;
+  border-radius: 20%;
+  border-color: #282c34;
+  background: #ABB2BF;
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  margin-bottom: 10px;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  background: #c678dd;
+  box-shadow: 0px 3px 3px black;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* button {
+  position: relative;
+  width: 25%;
+  height: 25px;
+  border-radius: 10px;
+  margin: 2px;
+  text-align: center;
+} */
+#timer {
+  position: relative;
+  width: 25%;
+  margin-left: 6%;
+  color: #013220;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  display: inline;
+  text-align: center;
+}
+
+.clicked {
+  background: white;
+}
+
+.bomb {
+  background: #e06c75;
+}
+
+.one {
+  background: #98c379;
+}
+
+.two {
+  background: #61afef;
+}
+
+.three {
+  background: #56b6c2;
+}
+
+.four {
+  background: #c678dd;
+}
+
+.five {
+  background: #e5c07b;
+}
+
+.six {
+  background: #ffd1dc;
+}
+
+.seven {
+  background: #013220;
+}
+
+.eight {
+  background: darkgrey;
+}
+
+.on {
+  background: silver;
+}
+
+.swal-footer {
+  text-align: center;
+}
+
+.swal-button {
+  text-align: center;
+  padding: 5px;
+  width: auto;
+}
+
+#loading-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: #151515;
+  opacity: 65%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loading-wheel {
+  position: relative;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+#loading-wheel::before,
+#loading-wheel:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+#loading-wheel:before {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(90deg, #ff00cc 0%, #333399 100%);
+  animation: spin 0.5s infinite linear;
+}
+
+#loading-wheel:after {
+  width: 90%;
+  height: 90%;
+  background-color: #151515;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=application.css.map */
