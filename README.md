@@ -1,4 +1,4 @@
-# Minesweeper API
+# Minesweeper Frontend
 
 This is the frontend half of a minesweeper clone I made.
 
